@@ -6,6 +6,10 @@
       <select class="form-control" v-on:change="sourceChanged">
         <option v-bind:value="source.id" v-for="source in sources">{{source.name}}</option>
       </select>
+      <div v-if="source">
+        <h6>{{source.description}}</h6>
+        <a v-bind:href="source.url" class="btn btn-primary" target="_blank">Go to {{source.name}} Website</a>
+      </div>
     </div>
   </div>
 </template>
